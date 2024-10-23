@@ -43,3 +43,53 @@ The repository is organized as follows:
    ```bash
    git clone https://github.com/yourusername/fake-profile-identification-ann.git
    cd fake-profile-identification-ann
+
+
+Usage
+Data Exploration and Preprocessing:
+
+Use the Jupyter notebook (notebooks/fake_profile_classification.ipynb) for interactive data exploration and cleaning.
+Check for missing values and understand the distribution of different features using plots.
+Training the Model:
+
+Run the train_model.py script to train the ANN model on the training dataset:
+
+python scripts/train_model.py
+
+The trained model will be saved in the models/ directory as fake.h5.
+
+Evaluating the Model:
+
+Run the evaluate_model.py script to evaluate the trained model on the test dataset:
+
+python scripts/evaluate_model.py
+
+Model Architecture
+The ANN model consists of the following layers:
+
+Input Layer: 11 neurons (corresponding to the input features).
+Hidden Layers:
+First hidden layer: 50 neurons, ReLU activation.
+Second hidden layer: 150 neurons, ReLU activation, with a 30% dropout.
+Third hidden layer: 150 neurons, ReLU activation, with a 30% dropout.
+Fourth hidden layer: 25 neurons, ReLU activation, with a 30% dropout.
+Output Layer: 2 neurons (binary classification), softmax activation.
+The model is compiled with the Adam optimizer, categorical cross-entropy loss, and accuracy as the metric.
+
+Results and Evaluation
+Training History:
+
+The training history shows the loss and accuracy progression over 50 epochs, including validation metrics.
+Evaluation Metrics:
+
+Accuracy: The model's overall classification accuracy on the test dataset.
+Confusion Matrix: Visual representation of the model’s performance across the classes.
+Classification Report: Detailed metrics including precision, recall, and F1-score.
+Sample Results:
+
+Example predictions on the test dataset, comparing the actual and predicted labels.
+
+Contact
+Author: Hursh Karnik
+GitHub: hursh05
+Email: hurhkarnik5603@gmail.com
